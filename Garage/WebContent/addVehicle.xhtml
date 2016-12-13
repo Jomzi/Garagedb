@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+	<h:head>
+		<meta charset="ISO-8859-1"></meta>
+		<title>Add Vehicles</title>
+	</h:head>
+	
+	<h:body>
+		<h3>Add Vehicle</h3>
+		
+		<h:form>
+			<h:messages />
+			
+			<!-- Enter product Id -->
+			Reg
+			<h:inputText value="#{addVehicleController.newVehicle.reg}" required="true" requiredMessage="Id is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			<!-- Enter product description -->
+			Manu Code
+			<h:inputText value="#{addVehicleController.newVehicle.manuCode}" required="true" requiredMessage="Description is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			<!-- Enter product description -->
+			Model Code
+			<h:inputText value="#{addVehicleController.newVehicle.modelCode}" required="true" requiredMessage="Description is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			<!-- Enter product description -->
+			Milage
+			<h:inputText value="#{addVehicleController.newVehicle.milage}" required="true" requiredMessage="Description is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			<!-- Enter product description -->
+			Price
+			<h:inputText value="#{addVehicleController.newVehicle.price}" required="true" requiredMessage="Description is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			<!-- Enter product description -->
+			Colour
+			<h:inputText value="#{addVehicleController.newVehicle.colour}" required="true" requiredMessage="Description is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			<!-- Enter product description -->
+			Fuel
+			<h:inputText value="#{addVehicleController.newVehicle.fuel}" required="true" requiredMessage="Description is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			
+			<!-- Leave the form page and go to the Link.xhtml page -->
+			<h:commandButton value="Add" action="#{addVehicleController.addVehicle()}"/>
+		</h:form>
+	</h:body>
+</html>

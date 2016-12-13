@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+	
+    
+	<h:head>
+		<meta charset="ISO-8859-1"></meta>
+		<title>Update Manufacturers</title>
+		<f:metadata>
+			<f:event type="preRenderView" listener="#{updateManufacturerController.loadManufacturer(param['manuCode'])}"/>
+		</f:metadata>
+	</h:head>
+	
+	<h:body>
+		<h3>Update Manufacturer</h3>
+		
+		
+		
+		<h:form>
+			<h:messages />
+			
+			<!-- Enter Manu code -->
+			Manu Code
+			<h:inputText value="#{updateManufacturerController.updateManufacturer.manuCode}" required="true" requiredMessage="Id is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			<!-- Enter manu name -->
+			Manu Name
+			<h:inputText value="#{updateManufacturerController.updateManufacturer.manuName}" required="true" requiredMessage="Description is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			<!-- Enter manu details -->
+			Manu Details
+			<h:inputText value="#{updateManufacturerController.updateManufacturer.manuDetails}" required="true" requiredMessage="Description is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			
+			<!-- Leave the form page and go to the Link.xhtml page -->
+			<h:commandButton value="Update" action="#{updateManufacturerController.update}"/>
+		</h:form>
+	</h:body>
+</html>

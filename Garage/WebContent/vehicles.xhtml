@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+	<h:head>
+		<f:metadata>
+			<f:event type="preRenderView" listener="#{vehicleController.loadVehicles()}"/>
+		</f:metadata>
+		
+		<meta charset="ISO-8859-1"></meta>
+		<title>Vehicles</title>
+	</h:head>
+	
+	<h:body>
+	<h:form>
+		<h:button value="Add" outcome="addVehicle.xhtml" />
+		
+		<h:dataTable value="#{vehicleController.vehicles}" var="vehicle">
+			<h:column>    				
+				<f:facet name="header">Reg</f:facet>    				
+				#{vehicle.reg}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Manu Code</f:facet>
+				#{vehicle.manuCode}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Model Code</f:facet>
+				#{vehicle.modelCode}
+			</h:column>
+			<h:column>    				
+				<f:facet name="header">Milage</f:facet>    				
+				#{vehicle.milage}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Price</f:facet>
+				#{vehicle.price}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Colour</f:facet>
+				#{vehicle.colour}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Fuel</f:facet>
+				#{vehicle.fuel}
+			</h:column>
+		
+		 </h:column>
+		</h:dataTable>
+		
+		<a href="index.xhtml">Home</a>
+			
+			
+           			
+			
+		
+		
+		</h:form>
+	</h:body>
+</html>

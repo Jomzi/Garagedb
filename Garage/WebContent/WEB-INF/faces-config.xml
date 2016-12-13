@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+	<managed-bean>
+		<managed-bean-name>pageParams</managed-bean-name>
+		<managed-bean-class>sw.gmit.ie.PageParams</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<navigation-rule>
+		<display-name>manufacturers.xhtml</display-name>
+		<from-view-id>/manufacturers.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>manufacturers</from-outcome>
+			<to-view-id>/updateManufacturer.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

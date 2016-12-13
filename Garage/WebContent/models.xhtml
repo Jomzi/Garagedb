@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+	<h:head>
+		<f:metadata>
+			<f:event type="preRenderView" listener="#{modelController.loadModels()}"/>
+		</f:metadata>
+		
+		<meta charset="ISO-8859-1"></meta>
+		<title>Vehicles</title>
+	</h:head>
+	
+	<h:body>
+	<h:form>
+		<h:button value="Add" outcome="addModel.xhtml" />
+		
+		<h:dataTable value="#{modelController.models}" var="Model">
+			<h:column>    				
+				<f:facet name="header">Manu Code</f:facet>    				
+				#{model.manuCode}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Model Code</f:facet>
+				#{model.modelCode}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Model Name</f:facet>
+				#{model.modelName}
+			</h:column>
+			<h:column>    				
+				<f:facet name="header">Model Desc</f:facet>    				
+				#{model.modelDesc}
+			</h:column>
+			<h:column>
+				
+		
+		
+		</h:dataTable>
+		
+		<a href="index.xhtml">Home</a>
+			
+			
+           			
+			
+		
+		
+		</h:form>
+	</h:body>
+</html>

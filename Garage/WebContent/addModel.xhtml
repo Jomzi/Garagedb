@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+	<h:head>
+		<meta charset="ISO-8859-1"></meta>
+		<title>Add Models</title>
+	</h:head>
+	
+	<h:body>
+		<h3>Add Model</h3>
+		
+		<h:form>
+			<h:messages />
+			
+			<!-- Enter product Id -->
+			Manu Code
+			<h:inputText value="#{addModelController.newModel.manuCode}" required="true" requiredMessage="Id is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			<!-- Enter product description -->
+			Model Code
+			<h:inputText value="#{addModelController.newModel.modelCode}" required="true" requiredMessage="Description is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			<!-- Enter product description -->
+			Model Name
+			<h:inputText value="#{addModelController.newModel.modelName}" required="true" requiredMessage="Description is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			<!-- Enter product description -->
+			Model Desc
+			<h:inputText value="#{addModelController.newModel.modelDesc}" required="true" requiredMessage="Description is mandatory"/>
+			
+			<br/>
+			<br/>
+			
+			
+			<!-- Leave the form page and go to the Link.xhtml page -->
+			<h:commandButton value="Add" action="#{addManufacturerController.addManufacturer()}"/>
+		</h:form>
+	</h:body>
+</html>

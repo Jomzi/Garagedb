@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+	<h:head>
+		<f:metadata>
+			<f:event type="preRenderView" listener="#{manufacturerController.loadManufacturers()}"/>
+		</f:metadata>
+		
+		<meta charset="ISO-8859-1"></meta>
+		<title>Manufacturers</title>
+	</h:head>
+	
+	<h:body>
+	<h:form>
+		<h:button value="Add" outcome="addManufacturer.xhtml" />
+		
+		<h:dataTable value="#{manufacturerController.manufacturers}" var="manufacturer">
+			<h:column>    				
+				<f:facet name="header">Code</f:facet>    				
+				#{manufacturer.manuCode}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Name</f:facet>
+				#{manufacturer.manuName}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Details</f:facet>
+				#{manufacturer.manuDetails}
+			</h:column>
+			<h:column>
+			   
+			
+				<h:link value="Update" outcome="updateManufacturer.xhtml?manuCode=#{manufacturer.manuCode}" />
+				<br/>
+				<h:link value="Delete" 
+				id="linkDeleteManufacturer" 
+				title= "confirm delete" 
+				outcome= "deleteManufacturer.xhtml?manuCode=#{manufacturer.manuCode}" 
+				onclick= "return confirm('Delete Manufacturer?')">
+				</h:link>
+				
+				
+            </h:column>
+		</h:dataTable>
+		
+		<a href="index.xhtml">Home</a>
+			
+			
+           			
+			
+		
+		
+		</h:form>
+	</h:body>
+</html>
